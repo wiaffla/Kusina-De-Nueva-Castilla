@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Kusina De Nueva Castilla - Amazing & Delicious Food</title>
+  <meta name="title" content="Kusina De Nueva Castilla - Amazing & Delicious Food">
+  <meta name="description" content="This is a Restaurant html template made by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <style>
+  /* Dish info modal (inline so we don't need to edit the big stylesheet) */
+  .dish-modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.45); z-index: 9999; visibility: hidden; opacity: 0; transition: opacity .18s ease, visibility .18s ease; }
+  .dish-modal.show { visibility: visible; opacity: 1; }
+  .dish-modal-content { background: #0f0f10; color: #fff; padding: 22px; border-radius: 12px; max-width: 640px; width: calc(100% - 48px); box-shadow: 0 10px 30px rgba(0,0,0,0.6); position: relative; z-index: 2; }
+  .dish-modal-title { margin: 0 0 8px; font-size: 1.6rem; }
+  .dish-modal-body { margin: 0; color: var(--quick-silver); font-size: 1.4rem; line-height: 1.5; }
+  .dish-modal-close { position: absolute; top: 8px; right: 8px; background: transparent; color: var(--gold-crayola); border: none; font-size: 22px; cursor: pointer; }
+  .dish-modal-overlay { position: absolute; inset: 0; }
+  /* Vision/Mission/Goals modal */
+  .vm-modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.55); z-index: 10000; visibility: hidden; opacity: 0; transition: opacity .18s ease, visibility .18s ease; }
+  .vm-modal.show { visibility: visible; opacity: 1; }
+  .vm-modal-content { background: #0b0b0b; color: #fff; padding: 26px; border-radius: 12px; max-width: 760px; width: calc(100% - 48px); box-shadow: 0 14px 40px rgba(0,0,0,0.6); position: relative; z-index: 2; }
+  .vm-modal-title { margin: 0 0 10px; font-size: 1.6rem; }
+  .vm-modal-body { margin: 0; color: var(--quick-silver); font-size: 1.2rem; line-height: 1.6; white-space: pre-wrap; }
+  .vm-modal-close { position: absolute; top: 8px; right: 8px; background: transparent; color: var(--gold-crayola); border: none; font-size: 22px; cursor: pointer; }
+  .vm-modal-overlay { position: absolute; inset: 0; }
+  </style>
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preload" data-preaload>
+    <div class="circle"></div>
+    <p class="text">Kusina De Nueva Castilla</p>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #TOP BAR
+  -->
+
+  <div class="topbar">
+    <div class="container">
+
+      <address class="topbar-item">
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span">
+          Restaurant St, Delicious City, London 9578, UK
+        </span>
+      </address>
+
+      <div class="separator"></div>
+
+      <div class="topbar-item item-2">
+        <div class="icon">
+          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span">Daily : 8.00 am to 10.00 pm</span>
+      </div>
+
+      <a href="tel:+11234567890" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span">+1 123 456 7890</span>
+      </a>
+
+      <div class="separator"></div>
+
+      <a href="mailto:booking@restaurant.com" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span">booking@restaurant.com</span>
+      </a>
+
+              </div>
+            </div>
+
+            <button class="menu-arrow next" aria-label="next menu page" data-menu-next>
+              <ion-icon name="chevron-forward"></ion-icon>
+            </button>
+          </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.svg" width="160" height="50" alt="Kusina De Nueva Castilla - Home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.svg" width="160" height="50" alt="Kusina De Nueva Castilla - Home">
+        </a>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link hover-underline active">
+              <div class="separator"></div>
+
+              <span class="span">Home</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#menu" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Menus</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./chefs.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Our Chefs</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Contact</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="text-center">
+          <p class="headline-1 navbar-title">Visit Us</p>
+
+          <address class="body-4">
+            Centennial II, Nagpayong, <br>
+            Pinagbuhatan, Pasig City.
+          </address>
+
+          <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
+
+          <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">booking@grilli.com</a>
+
+          <div class="separator"></div>
+
+          <p class="contact-label">Booking Request</p>
+
+          <a href="tel:+88123123456" class="body-1 contact-number hover-underline">
+            +88-123-123456
+          </a>
+        </div>
+
+      </nav>
+
+      <a href="#" id="find-table-btn" class="btn btn-secondary">
+        <span class="text text-1">Find A Table</span>
+
+        <span class="text text-2" aria-hidden="true">Find A Table</span>
+      </a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero text-center" aria-label="home" id="home">
+
+        <ul class="hero-slider" data-hero-slider>
+
+          <li class="slider-item active" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+
+            <p class="label-2 section-subtitle slider-reveal">Tradational & Hygine</p>
+
+            <h1 class="display-1 hero-title slider-reveal">
+              For the love of <br>
+              delicious food
+            </h1>
+
+            <p class="body-2 hero-text slider-reveal">
+              Come with family & feel the joy of mouthwatering food
+            </p>
+
+            <a href="#menu" class="btn btn-primary slider-reveal">
+              <span class="text text-1">View Our Menu</span>
+
+              <span class="text text-2" aria-hidden="true">View Our Menu</span>
+            </a>
+
+          </li>
+
+          <li class="slider-item" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+
+            <p class="label-2 section-subtitle slider-reveal">delightful experience</p>
+
+            <h1 class="display-1 hero-title slider-reveal">
+              Flavors Inspired by <br>
+              the Seasons
+            </h1>
+
+            <p class="body-2 hero-text slider-reveal">
+              Come with family & feel the joy of mouthwatering food
+            </p>
+
+            <a href="#menu" class="btn btn-primary slider-reveal">
+              <span class="text text-1">View Our Menu</span>
+
+              <span class="text text-2" aria-hidden="true">View Our Menu</span>
+            </a>
+
+          </li>
+
+          <li class="slider-item" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+
+            <p class="label-2 section-subtitle slider-reveal">amazing & delicious</p>
+
+            <h1 class="display-1 hero-title slider-reveal">
+              Where every flavor <br>
+              tells a story
+            </h1>
+
+            <p class="body-2 hero-text slider-reveal">
+              Come with family & feel the joy of mouthwatering food
+            </p>
+
+            <a href="#menu" class="btn btn-primary slider-reveal">
+              <span class="text text-1">View Our Menu</span>
+
+              <span class="text text-2" aria-hidden="true">View Our Menu</span>
+            </a>
+
+          </li>
+
+        </ul>
+
+        <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+          <ion-icon name="chevron-back"></ion-icon>
+        </button>
+
+        <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </button>
+
+        <a href="#" class="hero-btn has-after">
+          <img src="./assets/images/hero-icon.png" width="48" height="48" alt="booking icon">
+
+          <span class="label-2 text-center span">Book A Table</span>
+        </a>
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service bg-black-10 text-center" aria-label="service">
+        <div class="container">
+
+          <p class="section-subtitle label-2">Flavors For Royalty</p>
+
+          <h2 class="headline-1 section-title">We Offer Top Notch</h2>
+
+          <p class="section-text">
+            We serve authentic Filipino regional dishes made with fresh ingredients and traditional cooking methods. From smoky grilled meats and savory stews to creamy coconut-based meals and comforting soups, our menu celebrates the rich flavors and diverse cultures of the Philippines—perfect for everyday dining or special gatherings.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card">
+
+                <a href="#" class="has-before hover:shine view-vmg" data-vmg="vision" role="button">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                    <img src="./assets/images/service-1.jpg" width="285" height="336" loading="lazy" alt="Breakfast"
+                      class="img-cover">
+                  </figure>
+                </a>
+
+                <div class="card-content">
+
+                  <h3 class="title-4 card-title">
+                    <a href="#">Vision</a>
+                  </h3>
+
+                  <a href="#" class="btn-text hover-underline label-2 view-vmg" data-vmg="vision">View</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <a href="#" class="has-before hover:shine view-vmg" data-vmg="mission" role="button">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                    <img src="./assets/images/service-2.jpg" width="285" height="336" loading="lazy" alt="Appetizers"
+                      class="img-cover">
+                  </figure>
+                </a>
+
+                <div class="card-content">
+
+                  <h3 class="title-4 card-title">
+                    <a href="#">Mission</a>
+                  </h3>
+
+                  <a href="#" class="btn-text hover-underline label-2 view-vmg" data-vmg="mission">View</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <a href="#" class="has-before hover:shine view-vmg" data-vmg="goals" role="button">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                    <img src="./assets/images/service-3.jpg" width="285" height="336" loading="lazy" alt="Drinks"
+                      class="img-cover">
+                  </figure>
+                </a>
+
+                <div class="card-content">
+
+                  <h3 class="title-4 card-title">
+                    <a href="#">Goals</a>
+                  </h3>
+
+                  <a href="#" class="btn-text hover-underline label-2 view-vmg" data-vmg="goals">View</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
+            class="shape shape-1 move-anim">
+          <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
+            class="shape shape-2 move-anim">
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about text-center" aria-labelledby="about-label" id="about">
+        <div class="container">
+
+          <div class="about-content">
+
+            <p class="label-2 section-subtitle" id="about-label">Our Story</p>
+
+            <h2 class="headline-1 section-title">Every Flavor Tells a Story</h2>
+
+            <p class="section-text">
+              Kusina De Nueva Castilla Restaurant, located in the heart of Pasig City, is more than just a place to
+              eat—it's a living memory of friendship, flavor, and shared dreams. Known for its unique dishes,
+              friendly service, and consistent quality, the restaurant stands as a testament to the bond of
+              seventeen classmates who turned their love for food into a successful business.
+            </p>
+
+            <p class="section-text">
+              Back in their high school days, Reymond N. Magayanes, Aeron Nathaniel L. Cammagay, Jaymart E. Campuso,
+              Mark Albos R. Conde, Kevin Russel M. Dela Rosa, Jhon Mark F. Evangelista, Jhan Philip C. Garalda,
+              Adrian James A. Malasibas, Jhon Dhael B. Montano, Alwyn P. Tumlos, Sheenna Mea J. Acuin,
+              Francheska Andrea R. Cabaddu, Kylen J. Dumdumaya, Sofia Nicole S. Garino, Crissa M. Montesino,
+              Rhiane Cassandra S. Ronidel, and Erich F. Teriote were inseparable. After long hours of classes,
+              they would head out together to explore food spots around the city—laughing over shared meals, rating
+              dishes like food critics, and dreaming about running their own restaurant someday. Years later, a
+              reunion idea—"What if we build our own restaurant?"—turned into a shared dream and a plan.
+            </p>
+
+            <p class="section-text">
+              When the seventeen friends decided to build Kusina De Nueva Castilla, each brought a strength. Rhiane
+              Cassandra S. Ronidel loved experimenting with flavors; Jhon Mark F. Evangelista learned practical kitchen
+              skills working in small eateries; Francheska Andrea R. Cabaddu brought creative plating and presentation.
+              Reymond N. Magayanes organized and led projects, Erich F. Teriote handled business strategies, and Mark
+              Albos R. Conde kept operations resourceful and efficient. Kylen J. Dumdumaya, Crissa M. Montesino, Kevin
+              Russel M. Dela Rosa, and Aeron Nathaniel L. Cammagay shaped the restaurant’s cozy look and branding.
+              Sheenna Mea J. Acuin, Sofia Nicole S. Garino, Jhon Dhael B. Montano, and Jaymart E. Campuso created the
+              warm hospitality that makes guests feel at home. Jhan Philip C. Garalda, Alwyn P. Tumlos, and Adrian James
+              A. Malasibas kept the finances balanced and planned for growth.
+            </p>
+
+            <p class="section-text">
+              Today, Kusina De Nueva Castilla is celebrated not only for its food but for the story behind it: a story
+              of friendship, teamwork, and shared dreams. From high school food trips to owning a beloved restaurant,
+              these seventeen friends proved that with unity and passion, anything is possible.
+            </p>
+
+            <div class="contact-label">Book Through Call</div>
+
+            <a href="tel:+804001234567" class="body-1 contact-number hover-underline">+80 (400) 123 4567</a>
+
+            <a href="#" class="btn btn-primary">
+              <span class="text text-1">Read More</span>
+
+              <span class="text text-2" aria-hidden="true">Read More</span>
+            </a>
+
+          </div>
+
+          <figure class="about-banner">
+
+            <!-- Placeholder image beside the story (Pexels) - replace this URL or upload your own image to `assets/images/` -->
+            <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="570" height="570" loading="lazy" alt="about placeholder" class="w-100" data-parallax-item data-parallax-speed="1" style="object-fit:cover; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
+
+            <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
+              <img src="./assets/images/about-abs-image.jpg" width="285" height="285" loading="lazy" alt="" class="w-100">
+            </div>
+
+            <div class="abs-img abs-img-2 has-before">
+              <img src="./assets/images/badge-2.png" width="133" height="134" loading="lazy" alt="">
+            </div>
+
+          </figure>
+
+          <img src="./assets/images/shape-3.png" width="197" height="194" loading="lazy" alt="" class="shape">
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SPECIAL DISH
+      -->
+
+      <section class="special-dish text-center" aria-labelledby="dish-label">
+
+        <div class="special-dish-banner">
+          <img src="./assets/images/special-dish-banner.jpg" width="940" height="900" loading="lazy" alt="special dish"
+            class="img-cover">
+        </div>
+
+        <div class="special-dish-content bg-black-10">
+          <div class="container">
+
+            <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
+
+            <p class="section-subtitle label-2">Special Dish</p>
+
+            <h2 class="headline-1 section-title">Sisig Burrito</h2>
+
+            <p class="section-text">
+              pakigawa na po please ayoko na
+            </p>
+
+            <div class="wrapper">
+              <del class="del body-3">$40.00</del>
+
+              <span class="span body-1">$20.00</span>
+            </div>
+
+            <a href="#" class="btn btn-primary">
+              <span class="text text-1">View All Menu</span>
+
+              <span class="text text-2" aria-hidden="true">View All Menu</span>
+            </a>
+
+          </div>
+        </div>
+
+        <img src="./assets/images/shape-4.png" width="179" height="359" loading="lazy" alt="" class="shape shape-1">
+
+        <img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" alt="" class="shape shape-2">
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #MENU
+      -->
+
+      <section class="section menu" aria-label="menu-label" id="menu">
+        <div class="container">
+
+          <p class="section-subtitle text-center label-2">Special Selection</p>
+
+          <h2 class="headline-1 section-title text-center">Delicious Menu</h2>
+
+          <!-- Menu slider: 3 regions (slides) each with 4 dishes -->
+          <div class="menu-slider" data-menu-slider>
+            <div class="menu-slider-viewport">
+              <div class="menu-slider-track" role="list">
+              <!-- Flattened list of 12 menu items for per-card snapping -->
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                      <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_xJN-lv5I-tkdYok4ZgSVBkeMq_S20zPrxA&s" width="100" height="100" loading="lazy" alt="Dinakdakan" class="img-cover" data-dish-info="Dinakdakan is an Ilocano dish made with grilled pork tossed in calamansi, vinegar, onions, chili, and a creamy dressing of pig's brain or mayonnaise, commonly served as pulutan or over rice.">
+                      </figure>
+                    <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Dinakdakan</a></h3>
+                      <span class="span title-2">₱255.00</span>
+                    </div>
+                    <div class="badge-row">
+                      <span class="badge label-1">Region I</span>
+                    </div>
+                    <p class="card-text label-1">Tomatoes, green bell pepper, sliced cucumber, onion, olives, and feta cheese.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://kusinasecrets.com/wp-content/uploads/2024/12/u3317447599_httpss.mj_.runB23fCdovK-M_Professional_food_photog_b2e05c47-a067-4deb-8247-783d5301b182_1.webp" width="100" height="100" loading="lazy" alt="Pigar-Pigar" class="img-cover" data-dish-info="PIGAR-PIGAR - Pigar-pigar is a popular Filipino dish, especially in Pangasinan, featuring thinly sliced beef or carabao meat that's deep-fried and then tossed with cabbage and onions.">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Pigar-Pigar</a></h3>
+                      <span class="span title-2">₱400.00</span>
+                    </div>
+                    <p class="card-text label-1">Thinly sliced beef or carabao meat, deep-fried and tossed with cabbage and onions.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://www.kawalingpinoy.com/wp-content/uploads/2018/12/Ilocano-igado-2.jpg" width="100" height="100" loading="lazy" alt="Igado" class="img-cover" data-dish-info="IGADO - Igado is a savory Ilocano pork dish made with liver, pork strips, carrots, and bell peppers cooked in soy sauce and vinegar. Its name comes from the Spanish word &quot;higado,&quot; which means liver, highlighting the dish's main ingredient and Spanish influence.">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Igado</a></h3>
+                      <span class="span title-2">₱100.00</span>
+                    </div>
+                    <p class="card-text label-1"> Pork strips, liver, carrots, and bell peppers simmered in soy sauce and vinegar.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsXZaJNcRo5Oy8c5PiZTRW-flblzydbIcRUw&s" width="100" height="100" loading="lazy" alt="Bagnet" class="img-cover" data-dish-info="BAGNET - Bagnet is a famous Ilocano dish made from pork belly that is boiled, airdried, and deepfried until very crispy. Its name comes from the Ilocano word 'bagneten,' which means to preserve by boiling and drying. This dish originated in Ilocos Sur and was traditionally made to make pork last longer before refrigeration.">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Bagnet</a></h3>
+                      <span class="span title-2">₱390.00</span>
+                    </div>
+                    <p class="card-text label-1">Pork belly that is boiled, air-dried, and deep-fried until extra crispy.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3scnj-YmXsqo_nIYMu8OJvIGKEGCvFUeS4w&s" width="100" height="100" loading="lazy" alt="Tinunuang Manok" class="img-cover" data-dish-info="TINUNUANG MANOK - is a simple and comforting dish from Quirino, made by cooking chicken in coconut milk with vegetables such as malunggay leaves, green papaya, string beans, spinach, eggplant, and sometimes bell pepper. It comes from the indigenous Ifugao and Ilongot Igorot groups, who often used coconut milk and local ingredients in their cooking.">
+                      </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Tinunuang Manok</a></h3>
+                                            <span class="badge label-1">Region II</span>
+
+                      <span class="span title-2">₱250.00</span>
+                    </div>
+                    <p class="card-text label-1">Chicken cooked in coconut milk with malunggay, green papaya, string beans, spinach, eggplant, and sometimes bell pepper.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://kusinasecrets.com/wp-content/uploads/2025/02/u3317447599_httpss.mj_.run57dHJkBxc3o_Close-up_shot_of_steamin_f870fcf8-e7c2-4c4b-a726-31725a25e847_3.webp" width="100" height="100" loading="lazy" alt="Pancit Batil Patung" class="img-cover" data-dish-info="PANCIT BATIL PATUNG - a famous noodle from Tuguegarao, Cagayan. It has sautéed meat, poached egg, and a separate egg broth. The dish started in the 1950s to 1960s as cheap and filling food for tricycle drivers and workers. The name comes from the way it is cooked because the egg is beaten and made as broth on the side and the other ingredients put on top of the noodles. It also gets ideas from Chinese noodles and Filipino style, and now it is very popular in Tuguegarao.">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Pancit Batil Patung</a></h3>
+                      <span class="span title-2">Php 490.00</span>
+                    </div>
+                    <p class="card-text label-1">Noodles topped with sautéed meat, served with a poached egg and a separate egg broth.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- repeat some items to reach 12 total (or you can replace with unique items) -->
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFjGQ-YRbvFHJoD3YB7yVDPUCedgqcKjbFJg&s" width="100" height="100" loading="lazy" alt="Uved" class="img-cover">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Uved</a></h3>
+                      <span class="span title-2">₱220.00</span>
+                    </div>
+                    <p class="card-text label-1">Meatballs made with grated banana corm mixed with pork or beef, sometimes fish, and cooked in broth.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtdTINOC6ZF2TGIR3h9fJiblO_1pK4kWvnQg&s" width="100" height="100" loading="lazy" alt="Sinanta" class="img-cover">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Sinanta</a></h3>
+                      <span class="span title-2">₱180.00</span>
+                    </div>
+                    <p class="card-text label-1">A noodle soup with chicken and pork broth, clams, mixed egg and rice noodles, topped with meat and spring onions.</p> 
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Adobo Sa Asin" class="img-cover" data-dish-info="ADOBO SA ASIN - Before Spanish colonization, indigenous Filipinos used a cooking method with vinegar and salt to preserve food in the tropical climate. This version is a simpler, older style that is cooked with salt instead of soy sauce. The salt is crucial for balancing the sharp, sour taste of the vinegar.">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Adobo Sa Asin</a></h3>
+                                                                  <span class="badge label-1">Region III</span>
+                      <span class="span title-2">₱230.00</span>
+                    </div>
+                    <p class="card-text label-1">Pork cooked in vinegar and salt, a simple pre-colonial version without soy sauce.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://www.kawalingpinoy.com/wp-content/uploads/2018/12/kapampangan-bringhe-4.jpg" width="100" height="100" loading="lazy" alt="Bringhe" class="img-cover" data-dish-info="BRINGHE – Bringhe has pre-colonial origins, though its name is a cognate of the Indian dish Biryani. Bringhe is a point of pride for Kapampangans, who have a strong culinary tradition in the region known as the 'Rice Heartland of Luzon'.">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Bringhe</a></h3>
+                      <span class="span title-2">₱550.00</span>
+                    </div>
+                    <p class="card-text label-1">Kapampangan-style rice dish similar to biryani, creamy and rich in flavor.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- additional placeholder items (Lasagne duplicates) -->
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzKaWJsPpcUphc6ax1CF505gPIp8_qI4jn9A&s" width="100" height="100" loading="lazy" alt="Batchoy" class="img-cover" data-dish-info="BATCHOY (Pork Intestine Soup) – this version is served without noodles and is meant to be eaten as a viand. It's a hearty soup made with pork intestines, not just the usual offal, and is cooked with chili leaves and chayote. Perfect for rainy days, and in Nagcarlan, where it seems to rain every other day, it’s a local favorite you definitely shouldn't miss.">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Bachoy</a></h3>
+                                                                                        <span class="badge label-1">Region IV A</span>
+                      <span class="span title-2">₱400.00</span>
+                    </div>
+                    <p class="card-text label-1">Hearty soup with pork intestines, chili leaves, and chayote, served without noodles.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://images.yummy.ph/yummy/uploads/2018/01/dinuguan-1.jpg" width="100" height="100" loading="lazy" alt="Dinuguang Baboy" class="img-cover" data-dish-info="DINUGUANG BABOY (Pork Blood Stew) - can be divisive, but it’s worth trying, especially in Nagcarlan. The blood is fresh from the local market, and the stew is balanced with green chili and mustard leaves for extra flavor.">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Dinuguang Baboy</a></h3>
+                      <span class="span title-2">₱400.00</span>
+                    </div>
+                    <p class="card-text label-1">Pork stewed in fresh blood, balanced with green chili and mustard leaves.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIV5_IWSkghylHCmCEE8Ant981bYq-6I9FGg&s" width="100" height="100" loading="lazy" alt="Kinilaw na tamilok" class="img-cover" data-dish-info="KINILAW NA TAMILOK - A famous Palawan delicacy made from wood-boring mollusks found in mangroves. Prepared raw and marinated in vinegar, ginger, onion, and chili. It reflects the coastal traditions of the Tagbanua and Cuyonon people.">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Kinilaw na tamilok</a></h3>
+                                            <span class="badge label-1">Region IV B</span>
+                      <span class="span title-2">₱400.00</span>
+                    </div>
+                    <p class="card-text label-1">Fresh wood-boring mollusks marinated in vinegar, ginger, onion, and chili.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- two extra lasagne placeholders added per request -->
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ-6ZIP3ytooX0vOgzJ9TNx7CDhxtssnTwWg&s" width="100" height="100" loading="lazy" alt="Adobong Pugita" class="img-cover" data-dish-info="ADOBONG PUGITA - Cooked in classic adobo style, but instead of pork/chicken, it's made from an octopus. A flavorful dish partnered with rice. usually served as a lunch or dinner. Marinate first before cooking the octopus as quickly as possible to preserve its texture and not become chewy and rubbery. Cook in vinegar, soy sauce, garlic & onions.">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Adobong Pugita</a></h3>
+                      <span class="span title-2">₱---.--</span>
+                    </div>
+                    <p class="card-text label-1">Octopus cooked adobo-style in vinegar, soy sauce, garlic, and onions.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" role="listitem">
+                <div class="menu-card hover:card">
+                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="https://panlasangpinoy.com/wp-content/uploads/2020/03/chicken-adobo-sa-gata-recipe-500x485.jpg" width="100" height="100" loading="lazy" alt="Adobong Manok Sa Gata" class="img-cover" data-dish-info="ADOBONG MANOK SA GATA - Adobong Manok sa Gata is a food that is a regional variation of the classic Filipino adobo cuisine that is commonly seen in MIMAROPA and Luzon, especially in Palawan and Mindoro. Whereas traditional adobo uses soy sauce and vinegar. In this version they added gata, which is coconut milk, giving it a creamy and rich flavor. Using coconut milk, it reflects the region's abundant coconut trees and its strong culinary tradition of using gata in everyday dishes. This shows how Filipino cuisine adapts to local ingredients while keeping its familiar adobo taste.">
+                  </figure>
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3"><a href="#" class="card-title">Adobong Manok Sa Gata</a></h3>
+                      <span class="span title-2">₱---.--</span>
+                    </div>
+                    <p class="card-text label-1">Chicken cooked adobo-style in coconut milk, vinegar, garlic, and onions.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <p class="menu-text text-center">
+            During summer daily from <span class="span">7:00 pm</span> to <span class="span">9:00 pm</span>
+          </p>
+
+          <a href="#" class="btn btn-primary">
+            <span class="text text-1">View All Menu</span>
+
+            <span class="text text-2" aria-hidden="true">View All Menu</span>
+          </a>
+
+          <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
+            class="shape shape-2 move-anim">
+          <img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" alt="shape"
+            class="shape shape-3 move-anim">
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #TESTIMONIALS
+      -->
+
+      <section class="section testi text-center has-bg-image"
+        style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="testimonials">
+        <div class="container">
+
+          <div class="quote">”</div>
+
+          <p class="headline-2 testi-text">
+            “Being part of this kitchen pushes me to grow as a chef every day—come and experience the passion behind every dish.”
+          </p>
+
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+
+            <div class="profile">
+            <img src="https://scontent.fmnl25-1.fna.fbcdn.net/v/t39.30808-1/571222474_1971559043419763_5991904036942682924_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeHuHSrG__twbZAIur0yuV-BXHoMta1oUkRcegy1rWhSRGDCXQ_Ke-cCi03XHY1PRmYpm69Q0VcMJtCpaoAIuxN2&_nc_ohc=n8XXfFEomNMQ7kNvwEkNhyW&_nc_oc=Adlw6Vp5k80IuixzX9Dj8qnSNNQajNnowVAdkTxmTgqExL9QrJpoECWygYtMbYw2Kfg&_nc_zt=24&_nc_ht=scontent.fmnl25-1.fna&_nc_gid=gJef6TXe63RwJuB9_8a2fA&oh=00_Afm_nvlpviOx2QXtlUY7mSWJgS59apd_wQEL5OILvVwVSQ&oe=693B8BC4" width="100" height="100" loading="lazy" alt="Chef Jhan Philip Garalda" class="img">
+
+            <p class="label-2 profile-name">Head Chef Rhiane Cassandra Ronidel</p>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #RESERVATION
+      -->
+
+      <section class="reservation">
+        <div class="container">
+
+          <div class="form reservation-form bg-black-10">
+
+            <form action="" class="form-left">
+
+              <h2 class="headline-1 text-center">Online Reservation</h2>
+
+              <p class="form-text text-center">
+                Booking request <a href="tel:+88123123456" class="link">+88-123-123456</a>
+                or fill out the order form
+              </p>
+
+              <div class="input-wrapper">
+                <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field">
+
+                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
+              </div>
+
+              <div class="input-wrapper">
+
+                <div class="icon-wrapper">
+                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                  <select name="person" class="input-field">
+                    <option value="1-person">1 Person</option>
+                    <option value="2-person">2 Person</option>
+                    <option value="3-person">3 Person</option>
+                    <option value="4-person">4 Person</option>
+                    <option value="5-person">5 Person</option>
+                    <option value="6-person">6 Person</option>
+                    <option value="7-person">7 Person</option>
+                  </select>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="icon-wrapper">
+                  <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+
+                  <input type="date" name="reservation-date" class="input-field">
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="icon-wrapper">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                  <select name="person" class="input-field">
+                    <option value="08:00am">08 : 00 am</option>
+                    <option value="09:00am">09 : 00 am</option>
+                    <option value="010:00am">10 : 00 am</option>
+                    <option value="011:00am">11 : 00 am</option>
+                    <option value="012:00am">12 : 00 am</option>
+                    <option value="01:00pm">01 : 00 pm</option>
+                    <option value="02:00pm">02 : 00 pm</option>
+                    <option value="03:00pm">03 : 00 pm</option>
+                    <option value="04:00pm">04 : 00 pm</option>
+                    <option value="05:00pm">05 : 00 pm</option>
+                    <option value="06:00pm">06 : 00 pm</option>
+                    <option value="07:00pm">07 : 00 pm</option>
+                    <option value="08:00pm">08 : 00 pm</option>
+                    <option value="09:00pm">09 : 00 pm</option>
+                    <option value="10:00pm">10 : 00 pm</option>
+                  </select>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+
+              </div>
+
+              <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
+
+              <button type="submit" class="btn btn-secondary">
+                <span class="text text-1">Book A Table</span>
+
+                <span class="text text-2" aria-hidden="true">Book A Table</span>
+              </button>
+
+            </form>
+
+            <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
+
+              <h2 class="headline-1 text-center">Contact Us</h2>
+
+              <p class="contact-label">Booking Request</p>
+
+              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">+88-123-123456</a>
+
+              <div class="separator"></div>
+
+              <p class="contact-label">Location</p>
+
+              <address class="body-4">
+                Restaurant Centennial II, Nagpayong, <br>
+                Pasig City, Philippines
+              </address>
+
+              <p class="contact-label">Lunch Time</p>
+
+              <p class="body-4">
+                Monday to Sunday <br>
+                11.00 am - 2.30pm
+              </p>
+
+              <p class="contact-label">Dinner Time</p>
+
+              <p class="body-4">
+                Monday to Sunday <br>
+                05.00 pm - 10.00pm
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURES
+      -->
+
+      <section class="section features text-center" aria-label="features">
+        <div class="container">
+
+          <p class="section-subtitle label-2">Why Choose Us</p>
+
+          <h2 class="headline-1 section-title">Our Strength</h2>
+
+          <ul class="grid-list">
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">Celebrating Filipino Heritage</h3>
+
+                <p class="label-1 card-text">Kusina De Nueva Castilla stands out with its unique brand rooted in Filipino culture and regional cuisine from Regions I–IV.</p>
+
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-2.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">Quality & Customer Trust</h3>
+
+                <p class="label-1 card-text">Its use of high-quality ingredients and flavorful dishes helps build customer trust and loyalty.</p>
+
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-3.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">A Brand Customers Remember</h3>
+
+                <p class="label-1 card-text">The restaurant’s distinctive name and concept make it memorable and competitive in the casual dining market.</p>
+
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-4.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">Marketing & Growth Opportunities</h3>
+
+                <p class="label-1 card-text">Its authentic regional menu also creates opportunities for social media promotion, events, and partnerships.</p>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="shape"
+            class="shape shape-1">
+
+          <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape"
+            class="shape shape-2">
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #EVENT
+      -->
+
+      <section class="section event bg-black-10" aria-label="event">
+        <div class="container">
+
+          <p class="section-subtitle label-2 text-center">Recent Updates</p>
+
+          <h2 class="section-title headline-1 text-center">Upcoming Event</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-1.jpg" width="350" height="450" loading="lazy"
+                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-15">15/09/2022</time>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">Food, Flavour</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    Flavour so good you’ll try to eat with your eyes.
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-2.jpg" width="350" height="450" loading="lazy"
+                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-08">08/09/2022</time>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">Healthy Food</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    Flavour so good you’ll try to eat with your eyes.
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-3.jpg" width="350" height="450" loading="lazy"
+                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-03">03/09/2022</time>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">Recipie</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    Flavour so good you’ll try to eat with your eyes.
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="#" class="btn btn-primary">
+            <span class="text text-1">View Our Blog</span>
+
+            <span class="text text-2" aria-hidden="true">View Our Blog</span>
+          </a>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer section has-bg-image text-center"
+    style="background-image: url('./assets/images/footer-bg.jpg')">
+    <div class="container">
+
+      <div class="footer-top grid-list">
+
+        <div class="footer-brand has-before has-after">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" width="160" height="50" loading="lazy" alt="Kusina De Nueva Castilla - Home">
+          </a>
+
+          <address class="body-4">
+            Nagpayong High School
+          </address>
+
+          <a href="mailto:booking@grilli.com" class="body-4 contact-link">kusinadenuevacastilla@booking.com</a>
+
+          <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +09613215936</a>
+
+          <p class="body-4">
+            Open : 09:00 am - 01:00 pm
+          </p>
+
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+
+          <p class="title-1">Get News & Offers</p>
+
+          <p class="label-1">
+            Subscribe us & Get <span class="span">25% Off.</span>
+          </p>
+
+          <form action="" class="input-wrapper">
+            <div class="icon-wrapper">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="input-field">
+            </div>
+
+            <button type="submit" class="btn btn-secondary">
+              <span class="text text-1">Subscribe</span>
+
+              <span class="text text-2" aria-hidden="true">Subscribe</span>
+            </button>
+          </form>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Menus</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Our Chefs</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Contact</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Facebook</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Instagram</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Twitter</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Youtube</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Google Map</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2022 Kusina De Nueva Castilla. All Rights Reserved 
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <!-- Dish info modal (used by script.js to show dish descriptions) -->
+  <!-- Vision/Mission/Goals modal -->
+  <div id="vm-modal" class="vm-modal" aria-hidden="true">
+    <div class="vm-modal-overlay" data-vm-modal-overlay></div>
+    <div class="vm-modal-content" role="dialog" aria-modal="true" aria-labelledby="vm-modal-title">
+      <button class="vm-modal-close" aria-label="Close dialog">×</button>
+      <h3 id="vm-modal-title" class="vm-modal-title"></h3>
+      <p id="vm-modal-body" class="vm-modal-body"></p>
+    </div>
+  </div>
+  <div id="dish-modal" class="dish-modal" aria-hidden="true">
+    <div class="dish-modal-overlay" data-dish-modal-overlay></div>
+    <div class="dish-modal-content" role="dialog" aria-modal="true" aria-labelledby="dish-modal-title">
+      <button class="dish-modal-close" aria-label="Close dialog">×</button>
+      <h3 id="dish-modal-title" class="dish-modal-title"></h3>
+      <p class="dish-modal-body"></p>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const vmLinks = document.querySelectorAll('.view-vmg');
+      const vmModal = document.getElementById('vm-modal');
+      const vmTitle = document.getElementById('vm-modal-title');
+      const vmBody = document.getElementById('vm-modal-body');
+      const vmClose = vmModal.querySelector('.vm-modal-close');
+      const vmOverlay = vmModal.querySelector('.vm-modal-overlay');
+
+      const contents = {
+        mission: `MISSION\n\n“To create high quality and innovative dishes that satisfy the tastes and needs of our customers. We keep our meals affordable while providing friendly and reliable service. Our team aims to make every customer feel welcome and enjoy a satisfying dining experience.”`,
+        vision: `VISION\n\n“Kusina De Nueva Castilla aims to be a trusted and preferred restaurant in the community. We strive to be known for our unique food, friendly service, and consistent quality. Our goal is to become a place that customers always look forward to dining in.”`,
+        goals: `GOALS\n\nOur goals are to consistently deliver high-quality food, provide warm and reliable service, support local suppliers, and create a welcoming place for the community to gather.`
+      };
+
+      function openVM(type){
+        const text = contents[type] || '';
+        vmTitle.textContent = type.toUpperCase();
+        vmBody.textContent = text;
+        vmModal.classList.add('show');
+        vmModal.setAttribute('aria-hidden','false');
+      }
+
+      function closeVM(){
+        vmModal.classList.remove('show');
+        vmModal.setAttribute('aria-hidden','true');
+      }
+
+      vmLinks.forEach(link=>{
+        link.addEventListener('click', (e)=>{
+          e.preventDefault();
+          const type = link.dataset.vmg;
+          openVM(type);
+        });
+      });
+
+      vmClose.addEventListener('click', closeVM);
+      vmOverlay.addEventListener('click', closeVM);
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeVM(); });
+    })();
+  </script>
+
+  <!-- VIDEO MODAL (plays FREDDY JUMPSCARE.mp4) -->
+  <div id="video-modal" class="video-modal" aria-hidden="true" role="dialog" aria-label="Video modal">
+    <div class="video-modal-overlay"></div>
+    <div class="video-modal-content">
+      <button class="video-modal-close" aria-label="Close video">×</button>
+      <video id="fr-video" width="100%" controls preload="metadata">
+        <source src="./assets/videos/FREDDY JUMPSCARE.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
